@@ -3,6 +3,8 @@ using Mirror;
 
 public class PlayerShoot : NetworkBehaviour
 {
+    private const string PLAYER_TAG = "Player";
+
     public PlayerWeapon weapon;
 
     [SerializeField]
@@ -28,16 +30,31 @@ public class PlayerShoot : NetworkBehaviour
         }
     }
 
+    [Client]
     void Shoot()
     {
         RaycastHit hit;
         if(Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, weapon.range, mask) )
         {
-            Debug.Log("We hit " + hit.collider.name);
+            if(hit.collider.tag == PLAYER_TAG)
+            {
+                CmdPlayerShot(hit.collider.name);
+            }
+            else
+            {
+                Debug.Log("Miss (Ground)");
+            }
         }
         else
         {
             Debug.Log("Miss");
         }
+    }
+
+    [Command]
+    void CmdPlayerShot(string id)
+    {
+        Debug.Log("Hit");
+        Debug.Log(id + " has been shot.");
     }
 }

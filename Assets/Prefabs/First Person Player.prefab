@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 114886574358028272}
   - component: {fileID: 114272377751914156}
   - component: {fileID: 114214124289544424}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: First Person Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   serverOnly: 0
   m_AssetId: 
-  m_SceneId: 1020913754
+  m_SceneId: 449248932
 --- !u!114 &114886574358028272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +112,8 @@ MonoBehaviour:
   - {fileID: 3899110287798032462}
   - {fileID: 3899110287798032465}
   - {fileID: 3899110287798032467}
+  - {fileID: 114214124289544424}
+  remoteLayerName: RemotePlayer
 --- !u!114 &114272377751914156
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,7 +150,7 @@ MonoBehaviour:
   cam: {fileID: 3899110287798032465}
   mask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 2560
 --- !u!1 &3899110286378808787
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +162,7 @@ GameObject:
   - component: {fileID: 3899110286378808786}
   - component: {fileID: 3899110286378808791}
   - component: {fileID: 3899110286378808788}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -238,7 +240,7 @@ GameObject:
   - component: {fileID: 3899110286592929406}
   - component: {fileID: 3899110286592929407}
   - component: {fileID: 3899110286592929404}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,7 +1130,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3899110286750020679}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1161,7 +1163,7 @@ GameObject:
   - component: {fileID: 3899110287798032465}
   - component: {fileID: 3899110287798032462}
   - component: {fileID: 3899110287798032467}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
